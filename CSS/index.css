@@ -6,6 +6,7 @@ body {
 hr {
     border: 1px solid olivedrab;
     width: 100%;
+    max-width: 100%;
 
 }
 .top-container{
@@ -23,6 +24,37 @@ hr {
     height:100px;
 }
 .navbar {
-float: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
     
+.home-bg{
+    background-image: url('../Image/backgroungjadi.jpg');
+    background-repeat: no-repeat;
+    width: 1366px;
+    height: 578px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.btn-nav{
+    border: 2px solid #000;
+}
+
+.btn-nav a{
+    text-decoration: none;
+    color: chocolate;
+    padding: 5px 10px;
+}
+
+.text-center{
+    margin: auto;
+    text-align: center;
+    color: white;
+    padding: 60px 0px;
+}
+
+.headquarter tr td{
+    padding: 0px 20px;
+}

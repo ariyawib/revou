@@ -1,68 +1,173 @@
 <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ariya - Travel Assistant 🚀</title>
+    <link rel="icon" type="image/png" href="Image/AW.png" />
+    <link rel="stylesheet" href="CSS/index.css" />
+  </head>
 
-    <head>
-        <meta charset="UTF-8">
-        <title>Ariya - Travel Assistant 🚀 </title>
-        <link rel="icon" type="image/png" href="Image/AW.png"/>
-        <link rel="stylesheet" href="CSS/index.css">
-    </head>
-    
-    <body>
-        <div class="navbar"></div>
-        <table>
-            <nav>
-             <th><a href="index.html">Home</a> </th>
-             <th><a href="portfolio.html">Our Package</a> </th>
-             <th><a href="message.html">Contact Us</a> </th>
-             <th><a href="profile.html">Profile</a> </th>
-            </nav>
+  <body>
+    <hr />
+    <div class="navbar">
+      <div style="display: flex; flex-direction: row">
+        <img
+          src="Image\travellogo.png"
+          width="50"
+          height="50"
+          alt="Travel Logo"
+        />
+        <div style="padding: 10px">
+          <h1 style="display: inline">Travelia</h1>
+        </div>
+      </div>
+      <div style="padding: 15px">
+        <table style="border-collapse: collapse">
+          <nav>
+            <th class="btn-nav"><a href="index.html">Home</a></th>
+            <th class="btn-nav"><a href="portfolio.html">Our Package</a></th>
+            <th class="btn-nav"><a href="message.html">Contact Us</a></th>
+            <th class="btn-nav"><a href="profile.html">Profile</a></th>
+          </nav>
         </table>
-        </div>
-        <hr>
-            <img src="Image\travellogo.png" width="50" height="50" alt="Travel Logo">
-        <hr>
-        <div class="top-container"> 
-            <h1>Welcome to Our Website</h1>
-            <p>Make your Travel Fun</p>
-        </div>
-        
-        <img src="Image/backgroungjadi.jpg" width="1366" height="578" alt="Backgroud Image">
-        <hr>
-        <h2>Our Headquarter</h2>
-        <table>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="home-bg">
+      <div class="text-center">
+        <h1 id="hello">Welcome to Our Website</h1>
+        <p>Make your Travel Fun</p>
+      </div>
+    </div>
+
+    <hr />
+    <div style="padding-left: 20px">
+      <h2>Our Headquarter</h2>
+      <table class="headquarter">
+        <tr>
+          <th>Jakarta</th>
+          <th>Sydney</th>
+          <th>Tokyo</th>
+        </tr>
+        <tr>
+          <td>
+            <img
+              class="headquarterstyle"
+              src="Image/jakarta.jpg"
+              alt="Jakarta"
+            />
+          </td>
+          <td>
+            <img class="headquarterstyle" src="Image/sydney.jpg" alt="Sydney" />
+          </td>
+          <td>
+            <img class="headquarterstyle" src="Image/tokyo.jpg" alt="Tokyo" />
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <hr />
+    <div class="messagetext" >
+      <h2 style="padding-left: 20px">Message Us</h2>
+      <div style="display: flex; flex-direction: row; justify-content: space-between; padding: 0px 20px;">
+        <form>
+          <table>
             <tr>
-              <th>Jakarta</th>
-              <th>Sydney</th>
-              <th>Tokyo</th>
+              <td>Nama</td>
+              <td>:</td>
+              <td>
+                <input type="text" id="formnama" name="formnama" value="" />
+              </td>
             </tr>
             <tr>
-              <td><img class="headquarterstyle" src="Image/jakarta.jpg" alt="Jakarta"></td>
-              <td><img class="headquarterstyle" src="Image/sydney.jpg"  alt="Sydney"></td>
-              <td><img class="headquarterstyle" src="Image/tokyo.jpg"   alt="Tokyo"></td>
+              <td>Tanggal Lahir</td>
+              <td>:</td>
+              <td>
+                <input
+                  style="width: 100%"
+                  type="date"
+                  id="birthday"
+                  name="birthday"
+                  value=""
+                />
+              </td>
             </tr>
-        </table>
-        <hr>
-            <div class="messagetext">
-            <h2 >Message Us</h2>
-            <form>
-                <label for="formnama">Nama :</label>
-                <input type="text" id="formnama" name="formnama" value=""><br>
-                <input type="radio" id="pria" name="kelamin" value="pria">
-                <label for="pria">Pria</label>
-                <input type="radio" id="wanita" name="Kelamin" value="wanita">
-                <label for="wanita">Wanita</label> <br>
-                <label for="birthday">Birthday:</label> 
-                <input type="date" id="birthday" name="birthday"><br>
-                <label for="pesan">Pesan: </label>
-                <input type="text" id="pesan" name="pesan"><br>
-                <input type="submit" value="Submit">
+            <tr>
+              <td>Jenis Kelamin</td>
+              <td>:</td>
+              <td>
+                <div style="display: flex; flex-direction: row">
+                  <div>
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="Laki-Laki"
+                      id="male"
+                    /><label for="male">Laki-laki</label>
+                  </div>
+                  <div>
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="Perempuan"
+                      id="female"
+                    /><label for="male">Perempuan</label>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Pesan</td>
+              <td>:</td>
+              <td><textarea type="text" id="pesan" name="pesan" value="" cols="40" rows="5"></textarea></td>
+            </tr>
+            <tr>
+              <td colspan="3">
+                <input
+                  style="width: 100%"
+                  type="submit"
+                  value="Submit"
+                  onclick="return onSubmit()"
+                />
+              </td>
+            </tr>
+          </table>
+        </form>
+        <div style="padding-right: 20px;">
+            <p id="nameResult"></p>
+            <p id="birthdayResult"></p>
+            <p id="genderResult"></p>
+            <p id="msgResult"></p>
+        </div>
+      </div>
+      
+      
+    </div>
+    <hr />
+    <p align="right" style="color: black">
+      Created by Ariya Wibowo | Revou Fundamental Course Web Developer
+    </p>
+    <hr />
 
-            </form>
-            </div>
-        <hr>
-        <p align="right" style="color: black;">Created by Ariya Wibowo | Revou Fundamental Course Web Developer</p>
-        <hr>
+    <script>
+      function onSubmit() {
+        event.preventDefault();
+        var name = document.getElementById("formnama").value;
+        var birthday = document.getElementById("birthday").value;
+        var msg = document.getElementById("pesan").value;
+        var gender = document.querySelector('input[name="gender"]:checked')
 
-    </body>
+        console.log(gender);
 
+        document.getElementById("nameResult").innerHTML = `Nama: ${name}`;
+        document.getElementById("hello").innerHTML = `Welcome to Our Website, ${name}`;
+        document.getElementById("birthdayResult").innerHTML = `Tanggal Lahir: ${birthday}`;
+        document.getElementById("genderResult").innerHTML = `Jenis Kelamin: ${gender.value}`;
+        document.getElementById("msgResult").innerHTML = `Pesan: ${msg}`;
+      }
+    </script>
+  </body>
 </html>
